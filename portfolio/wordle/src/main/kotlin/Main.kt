@@ -1,3 +1,5 @@
+package wordle
+
 fun main() {
     try {
         val words = readWorldList("data/words.txt")
