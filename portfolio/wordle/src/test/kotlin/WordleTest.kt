@@ -8,20 +8,20 @@ import io.kotest.matchers.shouldBe
 class WordleTest : StringSpec({
     // Write your tests here
     "Texting function of isVaild" {
-        isValid("ABACK") shouldBe True
-        isValid("ABOUT") shouldBe True
-        isValid("ABOU") shouldBe False
-        isValid("ABOUTT") shouldBe False
-        isValid("12345") shouldBe False
-        isValid("ABOU?") shouldBe False
+        isValid("ABACK") shouldBe true
+        isValid("ABOUT") shouldBe true
+        isValid("ABOU") shouldBe false
+        isValid("ABOUTT") shouldBe false
+        isValid("12345") shouldBe false
+        isValid("about") shouldBe false
     }
 
     "Texting function of readWorldList" {
         val testFile = File("textwords.txt")
         testFile.writeText("ABOUT\nABACK\nABASE\nABBEY\n")
         val words = readWorldList("textwords.txt")
-        words.size shouldBe 2
-        words shouldBe mutableListOf("ABOUT", "ABACK")
+        words.size shouldBe 4
+        words shouldBe mutableListOf("ABOUT", "ABACK", "ABASE", "ABBEY")
         testFile.delete()
     }
 
@@ -30,7 +30,7 @@ class WordleTest : StringSpec({
         val originalSize = wordList.size
         val randomWord = pickRandomWord(wordList)
         wordList.size shouldBe originalSize - 1
-        wordList.contains(randomWord) shouldBe False
+        wordList.contains(randomWord) shouldBe false
         randomWord.length shouldBe 5
     }
 
