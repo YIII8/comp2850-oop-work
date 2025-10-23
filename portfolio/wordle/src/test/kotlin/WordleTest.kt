@@ -16,10 +16,10 @@ class WordleTest : StringSpec({
         isValid("about") shouldBe false
     }
 
-    "Texting function of readWorldList" {
+    "Texting function of readWordList" {
         val testFile = File("textwords.txt")
         testFile.writeText("ABOUT\nABACK\nABASE\nABBEY\n")
-        val words = readWorldList("textwords.txt")
+        val words = readWordList("textwords.txt")
         words.size shouldBe 4
         words shouldBe mutableListOf("ABOUT", "ABACK", "ABASE", "ABBEY")
         testFile.delete()

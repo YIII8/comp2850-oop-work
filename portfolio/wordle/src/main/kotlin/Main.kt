@@ -2,7 +2,7 @@ package wordle
 
 fun main() {
     try {
-        val words = readWorldList("data/words.txt")
+        val words = readWordList("data/words.txt")
         println("loaded ${words.size} words")
         val targetWord = pickRandomWord(words)
 
@@ -23,8 +23,8 @@ fun main() {
                 println("You have no chance to attempt. The correct word is $targetWord")
                 gameOver = true
             }
-        } catch (e: Exception) {
-            println("Error: ${e.message}") 
-        }  
-    }
+        } 
+    } catch (e: Exception) {
+        println("Error: ${e.message}") 
+    }   
 }

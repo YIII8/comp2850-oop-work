@@ -7,7 +7,7 @@ fun isValid(word: String): Boolean {
     return word.length == 5 && word.all{it.isLetter()} && word.uppercase() == word
 }
 
-fun readWorldList(filename: String): MutableList<String> {
+fun readWordList(filename: String): MutableList<String> {
     val wordList = mutableListOf<String>()
     File(filename).forEachLine {
         word -> if(isValid(word)) {
