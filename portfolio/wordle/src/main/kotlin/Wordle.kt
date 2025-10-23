@@ -1,10 +1,10 @@
 package wordle
 
 import java.io.File
-import kotlin.random.random
+import kotlin.random.Random
 
 fun isValid(word: String): Boolean {
-    return word.elngth == 5 && word.all{it.isLetter()} && word.uppercase() == word
+    return word.length == 5 && word.all{it.isLetter()} && word.uppercase() == word
 }
 
 fun readWorldList(filename: String): MutableList<String> {
