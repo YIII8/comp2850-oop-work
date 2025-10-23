@@ -47,10 +47,9 @@ fun evaluateGuess(guess: String, target: String): List<Int> {
     for(i in 0 until 5) {
         if(guess[i] == target[i]) {
             result.add(1)
-        }
-        else {
+        } else {
             result.add(0)
-        }
+        }  
     }
     return result
 }
@@ -58,8 +57,8 @@ fun evaluateGuess(guess: String, target: String): List<Int> {
 fun displayGuess(guess: String, matches: List<Int>) {
     for(i in 0 until 5) {
         when(matches[i]) {
-            1 -> println(guess[i])
-            0 -> println("?")
+            1 -> print(guess[i])
+            0 -> print("?")
         }
     }
     println()

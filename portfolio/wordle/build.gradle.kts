@@ -30,7 +30,7 @@ tasks.withType<Test>().configureEach {
 }
 
 application {
-    mainClass = "MainKt"
+    mainClass = "wordle.MainKt"
 }
 
 tasks.named<JavaExec>("run") {
