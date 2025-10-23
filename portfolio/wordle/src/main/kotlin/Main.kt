@@ -19,13 +19,12 @@ fun main() {
             if(guess == targetWord) {
                 println("Congratulation! You guess the correct word in $attempts attempts")
                 gameOver = true
-            }
-            else if(attempts == maxAttempts) {
+            } else if(attempts == maxAttempts) {
                 println("You have no chance to attempt. The correct word is $targetWord")
                 gameOver = true
-            }catch (e: Exception) {
-                println("Error: ${e.message}") 
             }
-        }
+        } catch (e: Exception) {
+            println("Error: ${e.message}") 
+        }  
     }
 }

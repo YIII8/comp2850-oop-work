@@ -45,7 +45,7 @@ fun obtainGuess(attempt: Int): String {
 fun evaluateGuess(guess: String, target: String): List<Int> {
     val result = mutableListOf<Int>()
     for(i in 0 until 5) {
-        if guess[i] == target[i] {
+        if(guess[i] == target[i]) {
             result.add(1)
         }
         else {
